@@ -57,4 +57,6 @@ set url=%parameter:localbrowser:=%
 ```
 <a href="localbrowser:https://mail.ru"> click local browser</a>
 ```
+https://rawgit.com/flamencist/custom_browser_handler/master/example.html
+
 https://jsfiddle.net/9vus2pnd/
