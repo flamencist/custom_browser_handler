@@ -1,6 +1,54 @@
 <!DOCTYPE html>
 <html>
-	<body>
-		<a href="localbrowser:https://mail.ru"> click </a>
-	</body>
+<style>
+	body{
+		margin: 0 auto;
+		padding:0;
+		font-family: Arial;
+		width: 50%;
+		background:#c3bfbf;
+	}
+	.container {
+		background:white;
+		padding: 50px;		
+		height: 100%;
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}
+	.local-link-wrapper,.website-url-wrapper {
+		margin-top: 10px;
+	}
+	header {
+		padding-bottom: 50px;
+		
+	}
+	.website-url {
+		border: 0px;
+		border-bottom: 1px solid black;
+		height: 30px;
+	}
+	
+	.website-url:focus {
+		outline: 0px;
+	}
+</style>
+<body>
+<div class="container" > 
+	<header>
+		<h1>Open website in local browser</h1>
+		<hr/>
+	</header>
+
+	<div>
+		<div class="website-url-wrapper">Website URL: <input type="url" class="website-url"></div>
+		<div class="local-link-wrapper"> <a class="local-link" href="localbrowser:https://os33.os33.com">Go to <span>https://os33.os33.com</span></a></div>
+	</div>
+</div>
+<script>
+	var a = document.querySelector(".local-link");
+		document.querySelector(".website-url").addEventListener("input", function(event){
+			a.setAttribute("href", "localbrowser:" + event.target.value);
+			a.querySelector("span").innerText = event.target.value;
+	});
+</script>
+</body>
 </html>
