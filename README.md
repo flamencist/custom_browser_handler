@@ -59,4 +59,4 @@ set url=%parameter:localbrowser:=%
 ```
 https://rawgit.com/flamencist/custom_browser_handler/master/example.html
 
-https://jsfiddle.net/9vus2pnd/
+https://jsfiddle.net/9vus2pnd/7/
