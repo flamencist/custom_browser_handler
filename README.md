@@ -57,6 +57,26 @@ set url=%parameter:localbrowser:=%
 ```
 <a href="localbrowser:https://mail.ru"> click local browser</a>
 ```
+- Examples:
+
 https://rawgit.com/flamencist/custom_browser_handler/master/example.html
 
 https://jsfiddle.net/9vus2pnd/7/
+
+- Disable warning launch app (IE):
+https://blogs.msdn.microsoft.com/ieinternals/2011/07/13/understanding-protocols/
+ Set WarnOnOpen flag to 0
+```
+  Windows Registry Editor Version 5.00
+
+  [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\ProtocolExecute\localbrowser]
+  "WarnOnOpen"=dword:00000000
+```
+
+- Disable warning launch app (Chrome):
+set 
+```"protocol_handler":{"excluded_schemes":{"localbrowser":false}}```
+to master_preferences for new profiles
+and set to change user preferences for existing profiles
+
+
